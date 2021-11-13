@@ -42,25 +42,25 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
   ],
 
   invalid: [
-    // {
-    //   code: `useEffect(() => {
-    //     doThis();
-    //     doMoreOfThis();
-    //     window.addEventListener("keydown", handleUserKeyPress);
-    //     doOtherStuff();
-    //     doSomeOtherStuff();
-    //     return () => {
-    //       doThat();
-    //       doMoreOfThat();
-    //     };
-    //   }, [])`,
-    //   errors: [
-    //     {
-    //       message: "Missing a matching removeEventListener.",
-    //       type: "ExpressionStatement",
-    //     },
-    //   ],
-    // },
+    {
+      code: `useEffect(() => {
+        doThis();
+        doMoreOfThis();
+        window.addEventListener("keydown", handleUserKeyPress);
+        doOtherStuff();
+        doSomeOtherStuff();
+        return () => {
+          doThat();
+          doMoreOfThat();
+        };
+      }, [])`,
+      errors: [
+        {
+          message: "Missing a matching removeEventListener.",
+          type: "ExpressionStatement",
+        },
+      ],
+    },
     {
       code: `useEffect(() => {
         doThis();

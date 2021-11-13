@@ -11,6 +11,13 @@
 const rule = require("../../../lib/rules/ensure-matching-remove-event-listener"),
   RuleTester = require("eslint").RuleTester;
 
+RuleTester.setDefaultConfig({
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: "module",
+  },
+});
+
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
@@ -18,13 +25,18 @@ const rule = require("../../../lib/rules/ensure-matching-remove-event-listener")
 const ruleTester = new RuleTester();
 ruleTester.run("ensure-matching-remove-event-listener", rule, {
   valid: [
-    // give me some code that won't trigger a warning
     `useEffect(() => {
       doThis();
+      doMoreOfThis();
       window.addEventListener("keydown", handleUserKeyPress);
+      doOtherStuff();
+      doSomeOtherStuff();
       return () => {
+        doThatBefore();
+        doMoreOfThatBefore();
         window.removeEventListener("keydown", handleUserKeyPress);
-        doThat();
+        doThatAfter();
+        doMoreOfThatAfter();
       };
     }, [])`,
   ],
@@ -33,9 +45,13 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
     {
       code: `useEffect(() => {
         doThis();
+        doMoreOfThis();
         window.addEventListener("keydown", handleUserKeyPress);
+        doOtherStuff();
+        doSomeOtherStuff();
         return () => {
           doThat();
+          doMoreOfThat();
         };
       }, [])`,
       errors: [
@@ -48,7 +64,10 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
     {
       code: `useEffect(() => {
         doThis();
+        doMoreOfThis();
         window.addEventListener("keydown", handleUserKeyPress);
+        doOtherStuff();
+        doSomeOtherStuff();
       }, [])`,
       errors: [
         {

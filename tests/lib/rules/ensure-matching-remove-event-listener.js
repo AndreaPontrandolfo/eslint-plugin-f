@@ -56,7 +56,7 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
       }, [])`,
       errors: [
         {
-          message: "Missing a matching removeEventListener.",
+          messageId: "requiredRemoveEventListener",
           type: "ExpressionStatement",
         },
       ],
@@ -71,7 +71,7 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
       }, [])`,
       errors: [
         {
-          message: "Missing a cleanup function for the addEventListener.",
+          messageId: "requiredCleanup",
           type: "ExpressionStatement",
         },
       ],

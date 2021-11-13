@@ -1,12 +1,13 @@
 {
   "name": "eslint-plugin-f",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "misc eslint rules",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
+  "homepage": "https://github.com/AndreaPontrandolfo/eslint-plugin-f",
   "author": "AndreaPontrandolfo",
   "main": "lib/index.js",
   "scripts": {
@@ -28,5 +29,5 @@
   "peerDependencies": {
     "eslint": ">=6"
   },
-  "license": "ISC"
+  "license": "MIT"
 }

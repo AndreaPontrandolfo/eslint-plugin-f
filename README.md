@@ -42,7 +42,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "f/rule-name": 2 || 1 || 0
+        "f/rule-name": 2
     }
 }
 ```

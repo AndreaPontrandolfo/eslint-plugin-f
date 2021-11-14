@@ -1,24 +1,32 @@
 # eslint-plugin-f
 
-misc eslint rules
+Miscellanous Eslint rules for Javascript and React projects.
 
 ## Installation
 
 You'll first need to install [ESLint](https://eslint.org/):
 
 ```sh
-npm i eslint --save-dev
+npm i eslint -D
+```
+or
+```sh
+yarn add eslint -D
 ```
 
 Next, install `eslint-plugin-f`:
 
 ```sh
-npm install eslint-plugin-f --save-dev
+npm install eslint-plugin-f -D
+```
+or
+```sh
+yarn add eslint-plugin-f -D
 ```
 
 ## Usage
 
-Add `f` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `f` (or`eslint-plugin-f`) to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
@@ -34,13 +42,25 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "f/rule-name": 2
+        "f/rule-name": 2 | 1 | 0
     }
 }
 ```
 
-## Supported Rules
+## List of supported rules
 
-* Fill in provided rules here
+✔: Enabled in the [`recommended`](#recommended) configuration.\
+🔧: Fixable with [`eslint --fix`](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).
+
+<!-- AUTO-GENERATED-CONTENT:START (BASIC_RULES) -->
+| ✔ | 🔧 | Rule | Description |
+| :---: | :---: | :--- | :--- |
+|  |  | [f/ensure-matching-remove-event-listener](docs/rules/ensure-matching-remove-event-listener.md) | Enforces that every addEventListener should have a matching removeEventListener in the same useEffect block |
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+
+## License
+
+`eslint-plugin-f` is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
 

@@ -49,6 +49,21 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
         window.addEventListener("keydown", handleUserKeyPress);
         doOtherStuff();
         doSomeOtherStuff();
+      }, [])`,
+      errors: [
+        {
+          messageId: "requiredCleanup",
+          type: "ExpressionStatement",
+        },
+      ],
+    },
+    {
+      code: `useEffect(() => {
+        doThis();
+        doMoreOfThis();
+        window.addEventListener("keydown", handleUserKeyPress);
+        doOtherStuff();
+        doSomeOtherStuff();
         return () => {
           doThat();
           doMoreOfThat();
@@ -68,10 +83,15 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
         window.addEventListener("keydown", handleUserKeyPress);
         doOtherStuff();
         doSomeOtherStuff();
+        return () => {
+          doThat();
+          window.addEventListener("keydown", handleUserKeyPress);
+          doMoreOfThat();
+        };
       }, [])`,
       errors: [
         {
-          messageId: "requiredCleanup",
+          messageId: "requiredRemoveEventListener",
           type: "ExpressionStatement",
         },
       ],

@@ -48,5 +48,5 @@ useEffect(() => {
 
 ## When Not To Use It
 
-You don't need this rules if you want to allow developers to not removed eventListeners added in the DOM.
+You don't need this rules if you want to allow developers to not remove eventListeners added in the DOM.
 

@@ -55,7 +55,7 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
       }, [])`,
       errors: [
         {
-          messageId: "requiredCleanup",
+          messageId: "required-cleanup",
           type: "ExpressionStatement",
         },
       ],
@@ -74,7 +74,7 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
       }, [])`,
       errors: [
         {
-          messageId: "requiredRemoveEventListener",
+          messageId: "required-remove-eventListener",
           type: "ExpressionStatement",
         },
       ],
@@ -94,7 +94,7 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
       }, [])`,
       errors: [
         {
-          messageId: "requiredRemoveEventListener",
+          messageId: "required-remove-eventListener",
           type: "ExpressionStatement",
         },
       ],

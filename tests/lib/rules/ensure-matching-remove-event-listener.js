@@ -39,6 +39,9 @@ ruleTester.run("ensure-matching-remove-event-listener", rule, {
         doMoreOfThatAfter();
       };
     }, [])`,
+    `useEffect(() => {
+      refcurrent = value;
+    }, [value]);`,
   ],
 
   invalid: [

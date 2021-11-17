@@ -55,7 +55,8 @@ Then configure the rules you want to use under the rules section.
 <!-- AUTO-GENERATED-CONTENT:START (BASIC_RULES) -->
 | ✔ | 🔧 | Rule | Description |
 | :---: | :---: | :--- | :--- |
-|  |  | [f/ensure-matching-remove-event-listener](docs/rules/ensure-matching-remove-event-listener.md) | Enforces that every addEventListener should have a matching removeEventListener in the same useEffect block |
+| ✔ |  | [f/ensure-matching-remove-event-listener](docs/rules/ensure-matching-remove-event-listener.md) | Enforces that every addEventListener should have a matching removeEventListener in the same useEffect block |
+| ✔ |  | [f/no-useless-assignment](docs/rules/no-useless-assignment.md) | Disallow the reassignment of a variable that was declared in the immediately previous line. |
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 

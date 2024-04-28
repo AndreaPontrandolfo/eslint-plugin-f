@@ -2,7 +2,7 @@
 
 Miscellanous Eslint rules for Javascript and React projects.
 
-DEPRECATION NOTICE: superseded by https://github.com/AndreaPontrandolfo/eslint-plugin-fsecond
+**DEPRECATION NOTICE: superseded by https://github.com/AndreaPontrandolfo/eslint-plugin-fsecond**
 
 ## Installation
 

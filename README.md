@@ -2,6 +2,8 @@
 
 Miscellanous Eslint rules for Javascript and React projects.
 
+DEPRECATION NOTICE: superseded by https://github.com/AndreaPontrandolfo/eslint-plugin-fsecond
+
 ## Installation
 
 You'll first need to install [ESLint](https://eslint.org/):
